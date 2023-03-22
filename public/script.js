@@ -3062,10 +3062,12 @@ $(document).ready(function () {
 
     $("#send_textarea").keydown(function (e) {
         if (!e.shiftKey && !e.ctrlKey && e.key == "Enter" && is_send_press == false) {
-            //hideSwipeButtons();
-            is_send_press = true;
-            e.preventDefault();
-            Generate();
+            if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))){
+                //hideSwipeButtons();
+                is_send_press = true;
+                e.preventDefault();
+                Generate();
+            }
         }
     });
 
