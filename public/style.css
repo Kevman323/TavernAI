@@ -55,7 +55,7 @@ body {
 
 
 ::-webkit-scrollbar {
-    width: 0.6em;
+    
 }
 
 ::-webkit-scrollbar-track {
@@ -165,7 +165,7 @@ code {
 #sheld {
     display: grid;
     grid-template-rows: auto min-content;
-    height: calc(100svh);
+    height: calc(100vh - 55px);
 
     /*overflow: auto;*/
     overflow-x: hidden;
@@ -191,7 +191,6 @@ code {
     background-color: var(--grey10);
     text-shadow: #000 0 0 3px;
     scrollbar-width: thin;
-    transition: all 1s ease-in-out;
     flex-direction: column;
 
     /*old style top to bottom flow*/
@@ -302,7 +301,7 @@ code {
 #options {
     opacity: 0.0;
     display: none;
-    bottom: 200px;
+    bottom: 235px;
     /*sets vertical position of the options menu to the left of input bar */
     position: relative;
     z-index: 1990;
@@ -338,7 +337,7 @@ code {
 
 .options-content a {
     color: var(--ivory, white);
-    padding: 12px 16px;
+    padding: 16px 16px;
     text-decoration: none;
     display: block;
 }
@@ -387,6 +386,7 @@ code {
 
 .last_mes{
     grid-template-columns: [checkbox] fit-content(60px) [avatar] 60px [msg_block] auto [rightswipe] fit-content(48px);
+	position: relative;
     
 }
 /* SWIPE RELATED STYLES*/
@@ -397,7 +397,7 @@ code {
     opacity: 0.36;
     position: absolute;
     right: 10px;
-    margin-top: 5em;
+    margin-top: 7em;
     left: auto;
     align-items: center;
     justify-content: center;
@@ -412,10 +412,10 @@ code {
 .swipes-counter{
     display: flex;
     color: white;
-    position: fixed;
+    position: absolute;
     font-size: 12px;
     padding: 0;
-    margin-top: 60px;
+    margin-top: -60px;
 }
 
 .swipe_left {
@@ -563,7 +563,7 @@ textarea {
 
 .right_menu {
     max-height: calc(100% - 50px);
-    padding: 0 20px;
+    padding: 0 18px;
 }
 
 .right_menu h3 {
@@ -1350,7 +1350,7 @@ input[type=search]:focus::-webkit-search-cancel-button {
 
 #world_popup {
     display: none;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--grey10);
     max-width: 800px;
     height: calc(100% - 40px);
     position: absolute;
@@ -1392,7 +1392,7 @@ input[type=search]:focus::-webkit-search-cancel-button {
 
 #world_info_depth_block input[type="range"],
 #world_info_budget_block input[type="range"] {
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 #entry_edit_template {
@@ -1649,9 +1649,9 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 #user_avatar_block .avatar {
     cursor: pointer;
     width: 64px;
-    height: 64px;
+    height: 94px;
     border: 2px solid rgba(255,255,255,0.7);
-    border-radius: 50%;
+    border-radius: 15%;
 }
 
 #user_avatar_block .avatar:not(.selected) {
@@ -1660,7 +1660,7 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 
 #user_avatar_block .avatar img {
     width: 60px;
-    height: 60px;
+    height: 90px;
 }
 
 #user_avatar_block .avatar_upload {
@@ -1690,7 +1690,7 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 }
 
 #amount_gen {
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: 20px;
 }
 
@@ -1699,7 +1699,7 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 }
 
 #max_context {
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: 20px;
 }
 
@@ -1708,7 +1708,7 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 }
 
 #range_block input {
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: 20px;
 }
 
@@ -1910,7 +1910,7 @@ input[type="range"] {
 #character_popup {
     display: none;
     position:fixed;
-    background-color: var(--black30a);
+    background-color: var(--grey10);
     grid-template-rows: 50px 100px 100px 100px auto;
     grid-gap: 10px;
     max-width: 800px;
@@ -1929,6 +1929,8 @@ input[type="range"] {
     padding-bottom: 30px;
     border: 1px solid var(--black30a);
     border-radius: 0 0 20px 20px;
+    overflow-y: scroll;
+
 }
 
 #character_popup h3 {
@@ -2021,7 +2023,7 @@ input[type="range"] {
     margin-top: 6vh;
     box-shadow: 0px 0px 20px var(--black30a);
     padding: 10px;
-    background-color: var(--black70a);
+    background-color: var(--grey10);
     border-radius: 20px;
     overflow-y: scroll;
 }
@@ -2556,8 +2558,7 @@ a {
     transition: right 0.14s ease-in-out 0.02s;
     background-color: var(--grey10);
     z-index: 2050;
-    white-space: nowrap;
-    border-left: 1px solid var(--black30a);
+    border-left: 0px solid var(--black30a);
     scrollbar-width: thin;
 }
 
@@ -2643,7 +2644,7 @@ a {
         position: fixed;
     }
     #send_textarea {    /*larger input bar for mobile screens, easier to tap*/
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         line-height: 1.5rem;
         min-height: calc(2rem + 0.75rem + 2px);
         max-height: 35vh;
