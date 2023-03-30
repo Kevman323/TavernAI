@@ -170,7 +170,7 @@ code {
 #sheld {
     display: grid;
     grid-template-rows: auto min-content;
-    height: calc(100vh - 92px); /*Expand Main Screen width and height*/
+    height: calc(100svh - 40px);
     overflow-x: hidden;
     max-width: 800px;
     position: absolute;
@@ -217,7 +217,7 @@ margin-top:5px;
     margin: 0 auto 0 auto;
     border: 1px solid var(--grey30a);
 
-    border-radius: 0 0 10px 10px; /*Reduce bottom screen corner round*/
+    border-radius: 0 0 20px 20px;
     background-color: var(--crimson70a);
     backdrop-filter: blur(10px);
 }
@@ -225,7 +225,7 @@ margin-top:5px;
 #send_but_sheld {
     padding: 0;
     border: 0;
-    height: 60px; /*Make send box larger*/
+    height: 40px;
     position: relative;
     background-position: center;
     display: flex;
@@ -2870,8 +2870,8 @@ filter: invert(20%) sepia(100%) saturate(2518%) hue-rotate(353deg) brightness(93
     #bg1, #bg2 {position:fixed;}
 
     #sheld, #character_popup, #world_popup {    /*margin around the sides, and a larger one on bottom to avoid iOS Home bar*/
-        height: calc(100vh - 92px); /*Expand Main Screen width and height*/
-        width: calc(100vw); /*Expand Main Screen width and height*/
+        height: calc(100svh - 36px); /*Expand Main Screen width and height*/
+        width: calc(100vw - 1px); /*Expand Main Screen width and height*/
         margin: 0 auto;
         margin-left: 0px; /*Expand Main Screen width and height*/
         position: fixed;
@@ -2935,7 +2935,7 @@ filter: invert(20%) sepia(100%) saturate(2518%) hue-rotate(353deg) brightness(93
     #send_textarea {    /*larger input bar for mobile screens, easier to tap*/
         font-size: 1.1rem; /*Reduce input box text size*/
         line-height: 1.5rem;
-        min-height: calc(2rem + 0.75rem + 2px);
+        min-height: calc(2rem + 0.75rem + 16px);
         max-height: 200px;
         word-wrap: break-word;
         height: 40px;
