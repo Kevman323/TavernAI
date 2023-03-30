@@ -7,10 +7,17 @@ Try on Colab (runs KoboldAI backend and TavernAI Extras server alongside):  <a t
 
 https://colab.research.google.com/github/SillyLossy/TavernAI-extras/blob/main/colab/GPU.ipynb
 
+## Mobile support
+
+> **This fork can be ran natively on Android phones using Termux. Please refer to this guide by ArroganceComplex#2659:**
+
+https://rentry.org/TAI_Termux
+
 ## This branch includes: 
-* Base TavernAI 1.2.8
+* A heavily modified TavernAI 1.2.8 (more than 50% of code rewritten or optimized)
 * Swipes
 * Group chats
+* Chat bookmarks (duplicates the current in its curent state)
 * Advanced KoboldAI generation settings
 * World Info support
 * [Oobabooga's TextGen WebUI](https://github.com/oobabooga/text-generation-webui) API connection
@@ -38,13 +45,12 @@ https://colab.research.google.com/github/SillyLossy/TavernAI-extras/blob/main/co
 * HotKeys
   * Ctrl+Up = Connect to API 
   * Ctrl+Left = view locally stored variables (in the browser console window)
-  * Ctrl+Right = clear locally stored variables.
-  * Ctrl+enter = Regenerate last AI response.
+  * Ctrl+Enter = Regenerate last AI response.
 
 * User Name Changes and Character Deletion no longer force the page to refresh.
 
-* Toggle option to automatically connect to API on page load (currently only for Kobold)
-* Toggle option to automatically load the most recently viewed character on page load
+* Toggle option to automatically connect to API on page load.
+* Toggle option to automatically load the most recently viewed character on page load.
 * Better Token Counter - works on unsaved characters, and shows both permanent and temporary tokens.
 
 * Better Past Chats View
@@ -55,7 +61,7 @@ https://colab.research.google.com/github/SillyLossy/TavernAI-extras/blob/main/co
 * Clicking the Lock on the nav panel will hold the panel open, and this setting be remembered across sessions.
 * Nav panel status of open or closed will also be saved across sessions.
 
-* Supports saving a shortcut to iOS homescreens and opening in fullscreen mode from that bookmark.
+* mobile UI optimized for iOS, and supports saving a shortcut to iOS homescreen and opening in fullscreen mode.
 
 ## Installation
 
@@ -90,15 +96,20 @@ To connect over wifi you'll need your PC's local wifi IP address
   - (For Windows: windows button > type 'cmd.exe' in the search bar> type 'ipconfig' in the console, hit Enter > "IPv4" listing)
 if you want other people on the internet to connect, and check [here](https://whatismyipaddress.com/) for 'IPv4'
 
+## Performance issues?
+
+Try enabling the Fast UI mode on User settings panel.
+
 ## Questions or suggestions?
 Contact us on Discord: Cohee#1207 or RossAscends#1779
 
 ## Screenshots
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/18619528/226418738-f75a9f46-cc6a-499d-9e27-0c06bf8efe02.png">
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/18619528/226420134-171022a3-f799-4ea2-951f-a734a293579b.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/18619528/228649245-8061c60f-63dc-488e-9325-f151b7a3ec2d.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/18619528/228649856-fbdeef05-d727-4d5a-be80-266cbbc6b811.png">
 
-
-## License
-* TAI Base: Unknown
+## License and credits
+* TAI Base by Humi: Unknown license
 * SillyLossy's TAI mod: Public domain
 * RossAscends' additions: Public domain
+* Portions of CncAnon's TavernAITurbo mod: Unknown license
+* Thanks oobabooga for compiling presets for TextGen
