@@ -61,7 +61,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0.6em;
+    /*Remove webkit scrollbar*/
 }
 
 ::-webkit-scrollbar-track {
@@ -101,7 +101,7 @@ body {
 
 .mes_text i,
 .mes_text em {
-    color: var(--white60a);
+    color: var(--white50a); /*Darken italics text*/
     font-weight: 500;
 }
 
@@ -170,7 +170,7 @@ code {
 #sheld {
     display: grid;
     grid-template-rows: auto min-content;
-    height: calc(100svh - 40px);
+    height: calc(100vh - 92px); /*Expand Main Screen width and height*/
     overflow-x: hidden;
     max-width: 800px;
     position: absolute;
@@ -197,7 +197,7 @@ margin-top:5px;
     -webkit-backdrop-filter: blur(10px);
     text-shadow: #000 0 0 3px;
     scrollbar-width: thin;
-    transition: all 1s ease-in-out;
+	/*Remove chat transition animation*/
     flex-direction: column;
     z-index: 3;
 }
@@ -205,7 +205,7 @@ margin-top:5px;
 #form_sheld {
     white-space: nowrap;
     width: 100%;
-    margin: 1px auto 10px auto;
+    margin: 0px auto 0px auto; /*Remove send box margins*/
     z-index: 3;
 }
 
@@ -217,7 +217,7 @@ margin-top:5px;
     margin: 0 auto 0 auto;
     border: 1px solid var(--grey30a);
 
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px; /*Reduce bottom screen corner round*/
     background-color: var(--crimson70a);
     backdrop-filter: blur(10px);
 }
@@ -225,7 +225,7 @@ margin-top:5px;
 #send_but_sheld {
     padding: 0;
     border: 0;
-    height: 40px;
+    height: 60px; /*Make send box larger*/
     position: relative;
     background-position: center;
     display: flex;
@@ -327,7 +327,7 @@ margin-top:5px;
 
 .options-content a {
     color: var(--ivory, white);
-    padding: 12px 16px;
+    padding: 16px 16px; /*Expand chat options sizes*/
     text-decoration: none;
     display: block;
 }
@@ -363,8 +363,8 @@ margin-top:5px;
 }
 
 .last_mes{
-    grid-template-columns: [checkbox] fit-content(60px) [avatar-leftswipe] 50px [name-mestext] auto [edit-rightswipe] 30px !important;
-    grid-template-rows: [avatar-NameMesText-edit] 50px [swipes] auto;
+    grid-template-columns: [checkbox] fit-content(60px) [avatar-leftswipe] 60px [name-mestext] auto [edit-rightswipe] 30px !important; /*Expand spacing for swipes due to increased avatar size*/
+    grid-template-rows: [avatar-NameMesText-edit] 80px [swipes] auto; /*Expand spacing for swipes due to increased avatar size*/
     grid-row-gap: 20px;
     
 }
@@ -402,8 +402,8 @@ margin-top:5px;
 }
 
 .avatar {
-    width: 50px;
-    height: 50px;
+    width: 60px; /*Increase avatar size*/
+    height: 90px; /*Increase avatar size*/
     border-style: none;
 }
 
@@ -412,7 +412,7 @@ margin-top:5px;
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    border-radius: 50%;
+    border-radius: 15%; /*Recude Avatar corner rounding*/
     border: 1px solid var(--black30a);
     box-shadow: 0 0 5px var(--black50a);
 }
@@ -1550,9 +1550,9 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 #user_avatar_block .avatar {
     cursor: pointer;
     width: 64px;
-    height: 64px;
+    height: 94px; /*Expand avatar size*/
     border: 2px solid rgba(255,255,255,0.7);
-    border-radius: 50%;
+    border-radius: 15%; /*Reduce avatar corner radius*/
 }
 
 #user_avatar_block .avatar:not(.selected) {
@@ -1561,7 +1561,7 @@ input[type='checkbox']:not(#nav-toggle):not(#rm_button_panel_pin):checked::after
 
 #user_avatar_block .avatar img {
     width: 60px;
-    height: 60px;
+    height: 90px; /*Expand avatar size*/
 }
 
 #user_avatar_block .avatar_upload {
@@ -2810,7 +2810,7 @@ filter: invert(20%) sepia(100%) saturate(2518%) hue-rotate(353deg) brightness(93
     box-shadow: 0 0 20px black;
     min-width: 400px;
     overflow-y: scroll;
-    max-height: calc(100vh - 70px);
+    max-height: calc(100vh - 100px); /*Reduce height for mobile*/
     display: none;
     position: absolute;
     left:0;
@@ -2870,10 +2870,10 @@ filter: invert(20%) sepia(100%) saturate(2518%) hue-rotate(353deg) brightness(93
     #bg1, #bg2 {position:fixed;}
 
     #sheld, #character_popup, #world_popup {    /*margin around the sides, and a larger one on bottom to avoid iOS Home bar*/
-        height: calc(100svh - 55px);
-        width: calc(100vw - 10px);
+        height: calc(100vh - 92px); /*Expand Main Screen width and height*/
+        width: calc(100vw); /*Expand Main Screen width and height*/
         margin: 0 auto;
-        margin-left: 5px;
+        margin-left: 0px; /*Expand Main Screen width and height*/
         position: fixed;
     }
 
@@ -2896,7 +2896,7 @@ filter: invert(20%) sepia(100%) saturate(2518%) hue-rotate(353deg) brightness(93
     .mes-text {padding-right: 25px;}
 
     #right-nav-panel {        
-        height: calc(100vh - 70px);
+        height: calc(100vh - 98px); /*Fix sizing for mobile*/
         min-width: 0px;
         width: calc(100vw - 10px);
         left: 5px !important;
@@ -2928,12 +2928,12 @@ filter: invert(20%) sepia(100%) saturate(2518%) hue-rotate(353deg) brightness(93
         width: calc(100vw - 5px);
         border-radius: 0 0 0 20px;
         margin-top: -35px;
-        height: calc(100vh - 30px);
+        height: calc(100vh - 62px); /*Fix sizing for mobile*/
     }
 
 
     #send_textarea {    /*larger input bar for mobile screens, easier to tap*/
-        font-size: 1.25rem;
+        font-size: 1.1rem; /*Reduce input box text size*/
         line-height: 1.5rem;
         min-height: calc(2rem + 0.75rem + 2px);
         max-height: 200px;
